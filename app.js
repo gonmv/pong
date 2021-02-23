@@ -143,17 +143,17 @@ function drawEverything() {
     canvasContext.fillText(player1Score, 100 , 100);
 
     /* rectangle 2 "player 2": fill and size  */
-    colorRect(canvas.width-15,paddle2Y,PADDLE_THICKNESS,PADDLE_HEIGHT,'#00FF00');
+    colorRect(canvas.width-15,paddle2Y,PADDLE_THICKNESS,PADDLE_HEIGHT,'#CCCCCC');
     canvasContext.fillText(player2Score, canvas.width-100 , 100);
 
     /* Net */
     drawNet();
 
     /* circle "ball": fill and size  */
-    colorCircle(ballX,ballY,10,'#0055BB');    
+    colorCircle(ballX,ballY,10,'#CCCCCC');    
 
     if(showWinningScreen) {
-           canvasContext.fillStyle = "#0000FF";
+           canvasContext.fillStyle = "#CCCCCC";
            if(player1Score >= WINNING_SCORE) {
            canvasContext.fillText("PLAYER 1 WON!", 350 , 200);
            } else if(player2Score >= WINNING_SCORE) {

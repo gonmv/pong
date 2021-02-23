@@ -154,6 +154,7 @@ function drawEverything() {
 
     if(showWinningScreen) {
            canvasContext.fillStyle = "#CCCCCC";
+           canvasContext.font = "30px Arial";
            if(player1Score >= WINNING_SCORE) {
            canvasContext.fillText("PLAYER 1 WON!", 350 , 200);
            } else if(player2Score >= WINNING_SCORE) {

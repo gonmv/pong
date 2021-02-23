@@ -1,12 +1,12 @@
-  .pong {
+.pong {
     text-align: center;
-    color: #44EE44;
+    color: ##CCC;
 }
 .cancha {
     padding: 20px;
     margin: auto;
     width: 820px;
-    height: 6205px;
+    height: 620px;
     background-color: #CCC;
     border-radius: 5%;
     border-style: dotted;

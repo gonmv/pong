@@ -126,7 +126,7 @@ function moveEverything() {
 
 function drawNet () {
     for(var i=0;i<canvas.height;i+=40) {
-        colorRect(canvas.width/2-1,i,2,20,'white'); 
+        colorRect(canvas.width/2-1,i,2,20,'#CCCCCC'); 
     }
 }
 
@@ -136,11 +136,10 @@ function drawEverything() {
     /* background: fill and size */
     colorRect(0,0,canvas.width,canvas.height,'black');
 
-
-
     /* rectangle 1 "player 1": fill and size  */
     colorRect(5,paddle1Y,PADDLE_THICKNESS,PADDLE_HEIGHT,'#FF0000');
     canvasContext.fillText(player1Score, 100 , 100);
+    canvasContext.font = "36px Courier";
 
     /* rectangle 2 "player 2": fill and size  */
     colorRect(canvas.width-15,paddle2Y,PADDLE_THICKNESS,PADDLE_HEIGHT,'#CCCCCC');
@@ -153,14 +152,16 @@ function drawEverything() {
     colorCircle(ballX,ballY,10,'#CCCCCC');    
 
     if(showWinningScreen) {
-           canvasContext.fillStyle = "#CCCCCC";
-           canvasContext.font = "30px Arial";
+           
+           canvasContext.font = "30px Courier";
            if(player1Score >= WINNING_SCORE) {
-           canvasContext.fillText("PLAYER 1 WON!", 350 , 200);
+            canvasContext.fillStyle = "#FF0000";
+            canvasContext.fillText("PLAYER 1 WON!", 300 , 200);
            } else if(player2Score >= WINNING_SCORE) {
-           canvasContext.fillText("PLAYER 2 WON!", 350 , 200);
+            canvasContext.fillStyle = "#CCCCCC";
+            canvasContext.fillText("PLAYER 2 WON!", 300 , 200);
            }
-           canvasContext.fillText("(Click to continue)", 350 , 500);
+           canvasContext.fillText("(Click to continue)", 250 , 400);
            }
            
             return;
